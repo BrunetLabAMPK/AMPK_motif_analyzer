@@ -10,7 +10,7 @@ Last update: Decebmer 16, 2014
 Installation
 ------------
 
-Download files from GITHUB on local computer. You just need Perl to be installed on your computer, and you should be good to go.
+Download files from GITHUB on local computer. Just need Perl to be installed on your computer, and you are good to go.
 
 Usage
 ------------
