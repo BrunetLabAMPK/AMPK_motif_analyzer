@@ -7,4 +7,18 @@ Lowest motif score allowed for high confidence: 1.016513 (the mean minus one sta
 
 Last update: Decebmer 16, 2014
 
+Installation
+------------
 
+Download files from GITHUB on local computer. You just need Perl to be installed on your computer, and you should be good to go.
+
+Usage
+------------
+
+Run code from command line with (provided) example file names:
+
+perl Rank_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt
+
+--frequency: the provided AMPK motif file; necessary for algorithm to run correctly: AMPK_motif_109_standardized_log10.txt
+--input: the file to be scored; from user; tab delimited; no header line; motif to be scored must be in the first column with any attached data important to the user in additional columns
+--output: file that the script outputs; user defines name
