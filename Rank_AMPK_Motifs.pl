@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-#    Rank_AMPK_Motifs.pl  (v1)			Last Modified: 2014-12-17		© Bethany Schaffer
+#     Rank_AMPK_Motifs.pl  (v1)			Last Modified: 2014-12-17		© Bethany Schaffer
 #
 # ================ DESCRIPTION =====================
 #
