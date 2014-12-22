@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-#     Rank_AMPK_Motifs.pl  (v1)			Last Modified: 2014-12-17		© Bethany Schaffer
+#    Rank_AMPK_Motifs.pl  (v1)			Last Modified: 2014-12-17		© Bethany Schaffer
 #
 # ================ DESCRIPTION =====================
 #
@@ -17,7 +17,9 @@
 #                      by the average frequency of that amino acid at that location in 10,000 matched 
 #                      background datasets of human phosphorylation sites
 # (2) Input file:      Any tab delimited text file of the user's choosing that contains the phosphorylation 
-#                      motif(s) of interest in the first column. Rest of the columns will be ignored.
+#                      motif(s) of interest in the first column. Each motif must only be from the N terminal
+#					   5 to the C terminal 4 positions, including the phosphorylated residue.
+#					   The remaining columns will be ignored. The file should not contain a header row.
 # Output:
 # A file, with the motif score added in the final column. User must provide the name of this file on terminal.
 #
@@ -50,13 +52,14 @@ my $output = "";
 GetOptions ("frequency=s" => \$freq,    # file name is string
 	          "input=s"   => \$input,      # file name is string
               "output=s"  => \$output)   # file name is string
-or die("Error in command line arguments\n");
+or die("Error in command line arguments\n"."Usage: perl Rank_AMPK_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt\n\n");
 
 # Check if all the input are fine
 
-if ($freq eq ""){die "provide data frequency file\n";}
-if ($input eq ""){die "provide data input file\n";}
-if ($output eq ""){die "provide data output file\n";}
+if ($freq eq ""){die "provide data frequency file\n"."Usage: perl Rank_AMPK_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt\n\n";}
+if ($input eq ""){die "provide data input file\n"."Usage: perl Rank_AMPK_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt\n\n";}
+if ($output eq ""){die "provide data output file\n"."Usage: perl Rank_AMPK_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt\n\n";}
+
 
 # Open the file containing the log10 of the standardized AMPK frequencies
 open AMPK, $freq || die;
