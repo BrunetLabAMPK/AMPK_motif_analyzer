@@ -5,7 +5,7 @@ Uses a position weight matrix to calculate a distance score for input motifs bas
 
 Lowest motif score allowed for high confidence: 1.016513 (the mean minus one standard deviation of the 109 known AMPK substrates when scored with this algorithm).
 
-Last update: Decebmer 16, 2014
+Last update: Decebmer 22, 2014
 
 Installation
 ------------
