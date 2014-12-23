@@ -24,7 +24,7 @@ The command line options are:
 * --input      : The phosphorylation motifs to be scored. Motif to be scored MUST be in the first column with any attached data important to the user in additional columns.
 * --output     : Name of the output file with scored motifs
 
-An example input and output file is provided with this package. Try to run
+An example input and output file is provided with this package. To test, copy-paste the following in your terminal:
 
     perl Rank_AMPK_Motifs.pl --frequency AMPK_motif_109_standardized_log10.txt --input Example_input.txt --output Example_input_scored.txt
 
